@@ -1,0 +1,19 @@
+﻿生成启动时间为 2014/6/9 18:52:18。
+     1>项目“d:\Documents\Visual Studio 2013\Projects\TSMediaServer\TsMeidaTool-V3.0\TsMeidaTool-V3.0.vcxproj”在节点 3 上(Build 个目标)。
+     1>ClCompile:
+         D:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "TSMeidaTool-V3.0.cpp"
+         TSMeidaTool-V3.0.cpp
+     1>TSMeidaTool-V3.0.cpp(84): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>TSMeidaTool-V3.0.cpp(318): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>TSMeidaTool-V3.0.cpp(380): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+       Link:
+         D:\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"d:\Documents\Visual Studio 2013\Projects\TSMediaServer\Release\TsMeidaTool-V3.0.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"d:\Documents\Visual Studio 2013\Projects\TSMediaServer\Release\TsMeidaTool-V3.0.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"d:\Documents\Visual Studio 2013\Projects\TSMediaServer\Release\TsMeidaTool-V3.0.lib" /MACHINE:X86 /SAFESEH Release\cJSON.obj
+         "Release\TSMeidaTool-V3.0.obj"
+         正在生成代码
+         已完成代码的生成
+         TsMeidaTool-V3.0.vcxproj -> d:\Documents\Visual Studio 2013\Projects\TSMediaServer\Release\TsMeidaTool-V3.0.exe
+     1>已完成生成项目“d:\Documents\Visual Studio 2013\Projects\TSMediaServer\TsMeidaTool-V3.0\TsMeidaTool-V3.0.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.10

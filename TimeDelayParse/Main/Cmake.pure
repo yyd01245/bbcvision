@@ -1,0 +1,466 @@
+#------------------------------------------------------------------------
+# Cmake -- standard makefile configuration for AsiaInfo programs
+# NOTICE: 1. DO NOT CHANGE THIS CMAKE WITHOUT INFORMING INFRASTRUCTURE
+#	  	DEPARTMENT.
+# 	  2. OTHERGROUP CAN REDEFINE SOME MACROS LIST THIS CMAKE IN THEIR
+#		OWN MAKEFILE FOR THEIR 	SPECIAL PURPOSE.
+#	  3. CAN BE REDEFINED MACROS(macros frequently changed come first): 
+#	    (1)	BINDING (changing this macro to
+#		-Bstatic or -Bdynamic to specify your binding mode) 
+#	    (2)	PRODLIBS, PRODINCL and  PRODFLAGS ( define when necessary)
+#	    (3) PROHEAD (If you own header file is not in current directy or
+#		standard directory.
+#	    (4)	SYBASE, ORACLE_HOME, MYSQL,LDAP (if you work on machine other than e3)
+#	    (5)	PROCFLAG (if you need special functionality in pro *C)		
+#	    (6) PRODDBTYPE
+#           (7) GSOAP
+#-------------------------------------------------------------------------
+ 
+PROC=proc
+JAVAC=$(JAVA_HOME)/bin/javac
+INSTALL=cp -p
+MAKEDEPEND=makedepend
+#BINDING=-Bdynamic
+#DYNAMIC=-Bdynamic
+STATIC=-Bstatic
+PIC=-fPIC
+#OPT=-O
+OPT=
+GCC=1
+#------ set ORACLE_HOME ------
+#EXTERNAL_HOME=${PROJECT_HOME}/../external
+#COMMON_HOME=${PROJECT_HOME}/../common
+#ORACLE_HOME=${EXTERNAL_HOME}/oracle/8.1.6
+
+#------ set OS type ------
+ifeq "$(shell uname)" "SunOS"
+SOLARIS=1
+endif
+ifeq "$(shell uname)" "AIX"
+AIX=1
+endif
+ifeq "$(shell uname)" "Linux"
+LINUX=1
+endif
+
+#-------------------------------------------------------------------------
+#
+# following are options you can set.
+#
+#-------------------------------------------------------------------------
+
+#------ Compiler ------
+#SOLARISCPP,HPUXCPP,DIGITALCPP,IBMVACPP,GCC
+#------ Database ------
+#ORA,SYB,MYSQL,LDAP
+#------ Debug ------
+#DEBUG,PURIFY,INSURE
+
+
+#-------------------------------------------------------------------------
+#
+# following are Conditional macros.
+#
+#-------------------------------------------------------------------------
+
+#------ set C++ compiler ------
+ifdef DIGITALCPP
+	CC= cxx
+	CXX= $(CC)
+endif
+ifdef HPUXCPP
+	CC= aCC
+	CXX= $(CC)
+endif
+ifdef IBMVACPP
+ifdef NOTHREAD
+	CC= xlC
+else
+	CC= xlC_r
+endif
+	CXX= $(CC)
+endif
+ifdef GCC
+	CC= g++
+	CXX= $(CC)
+endif
+
+#------ set debug flag ------
+ifdef DEBUG
+ifdef HPUXCPP
+	DEBUGFLAG = -g0
+else
+	DEBUGFLAG = -g
+endif
+	DBGOPTS= -DDEBUG=1 
+else
+	DEBUGFLAG =
+	DBGOPTS =
+endif
+
+ifdef PURIFY
+	CC := purify -best-effort $(CC)
+endif
+
+ifdef QUANTIFY
+	CC := quantify $(CC)
+endif
+
+ifdef INSURE
+	CC := insure
+endif
+
+#------ set shared library option for native ld ------
+ifdef AIX
+ifdef GCC
+	SHOPT = -shared -Wl,-bM:SRE -Wl,-bnoentry -Wl,-bdynamic -Wl,-berok
+else
+	SHOPT = -G -bM:SRE -bnoentry -bdynamic -berok -qmkshrobj -qtempinc -qlonglong
+endif
+endif
+
+ifdef SOLARIS
+	SHOPT = -G
+endif
+
+ifdef HPUX
+	SHOPT = -b 
+endif
+
+ifdef DIGITAL
+	SHOPT = -shared
+endif
+
+ifdef LINUX
+	SHOPT = -shared
+endif
+
+#------ set link library and option ------
+ifdef NOTHREAD
+THREADLIB=
+else
+THREADLIB=-lpthread
+endif
+
+ifdef AIX
+ifdef GCC
+SYSLIB = $(THREADLIB) -Wl,-bnoipath -Wl,-bexpall -Wl,-brtl -pthread
+else
+SYSLIB = $(THREADLIB) -bnoipath -bexpall -brtl -pthread
+endif
+endif
+
+ifdef SOLARIS
+ifdef GCC
+SYSLIB = $(DYNAMIC) $(THREADLIB) -lm -ldl -lsocket -lnsl -lxnet
+else
+SYSLIB = $(DYNAMIC) -mt -staticlib=Crun -lsocket -lnsl -lxnet -lw -ldl  -lm -lposix4 $(THREADLIB)
+endif
+endif
+
+ifdef HPUX
+ifdef GCC # not tested.
+SYSLIB = $(DYNAMIC) $(THREADLIB) -lm -lrt -lnsl -pthread
+else
+SYSLIB = $(DYNAMIC) $(THREADLIB) -lm -lrt -lnsl -lCsup -pthread
+endif
+endif
+
+ifdef DIGITAL
+ifdef GCC # not tested.
+SYSLIB = $(DYNAMIC) $(THREADLIB) -lm -lrt -pthread
+else
+SYSLIB = $(DYNAMIC) $(THREADLIB) -lm -lrt -pthread
+endif
+endif
+
+ifdef LINUX
+SYSLIB = $(DYNAMIC) -lm $(THREADLIB) -ldl -lgcc_s -pthread
+endif
+
+#------ set compile options ------
+ifdef IBMVACPP
+SYSOPT = -qlonglong
+endif
+ifdef SOLARISCPP
+SYSOPT = -mt
+endif
+ifdef HPUXCPP
+SYSOPT = +DAportable +Z -D_REENTRANT -Wl,-E,+s -D__HPACC_THREAD_SAFE_RB_TREE -DRWSTD_MULTI_THREAD -D_THREAD_SAFE
+endif
+ifdef DIGITALCPP
+SYSOPT =
+endif
+ifdef GCC
+SYSOPT = -D_REENTRANT
+ifdef AIX
+	SYSOPT = -D_REENTRANT -D_32KERMODE
+endif
+endif
+
+#---------------------------------------------------------------------
+# some macro for BUILDTYPE
+#---------------------------------------------------------------------
+ifdef DEBUG
+	BUILDTYPE=15d
+else
+	BUILDTYPE=12d
+endif
+
+#Now not distinguish the library name by debug and DB.
+BUILDTYPE=
+
+ifdef HPUX
+	LIBEXT=sl
+else
+	LIBEXT=so
+endif
+
+BUILDTAIL=$(BUILDTYPE).$(LIBEXT)
+
+ifdef ORA
+	DBBUILDTYPE=ora$(BUILDTYPE)
+	DBBUILDTAIL=ora$(BUILDTAIL)
+endif
+ifdef SYB
+	DBBUILDTYPE=syb$(BUILDTYPE)
+	DBBUILDTAIL=syb$(BUILDTAIL)
+endif
+
+#Now not distinguish the library name by debug and DB.
+BUILDTAIL=.$(LIBEXT)
+DBBUILDTYPE=.$(LIBEXT)
+
+#--------------------------------------------------------------------------
+# other group will define the following three macros. PRODLIBS is necessary
+# for their own libraries. And PRODINCL is necessary for their own header 
+# files
+#--------------------------------------------------------------------------
+PRODLIBS =
+PRODINCL =
+PRODFLAGS =
+
+#---------------------------------------------------------------------
+# Define the Project include paths :
+#---------------------------------------------------------------------
+COMMON_INC = 
+             
+COMMON_LIB = 
+
+#---------------------------------------------------------------------
+# Sybase and Oracle stuff :
+#---------------------------------------------------------------------
+ifdef ORA
+ORALIB=-L$(ORACLE_HOME)/lib -lclntsh 
+#ORAINC=-I$(ORACLE_HOME)/include/rdbms/demo -I$(ORACLE_HOME)/include/rdbms/public -I$(ORACLE_HOME)/include/network/public -DOTL_ORA8I
+ORAINC=-I$(ORACLE_HOME)/rdbms/demo -I$(ORACLE_HOME)/rdbms/public -I$(ORACLE_HOME)/plsql/public -I$(ORACLE_HOME)/network/public -DOTL_ORA10G -DOTL_STL
+else
+ORAINC=
+ORALIB=
+endif
+
+ifdef MYSQL
+    ifdef AIX
+        MYSQLLIB=-L/usr/lib/mysql -lmysqlclient
+        MYSQLINC=-I/usr/include/mysql
+    endif
+    ifdef SOLARIS
+        MYSQLLIB=-L/usr/local/mysql/lib -lmysqlclient
+        MYSQLINC=-I/usr/local/mysql/include
+    endif
+    ifdef LINUX
+        MYSQLLIB=-L/usr/lib/mysql -lmysqlclient
+        MYSQLINC=-I/usr/include/mysql
+    endif
+else
+MYSQLLIB=
+MYSQLINC=
+endif
+
+ifdef LDAP
+    ifdef AIX
+        LDAPLIB=-L/usr/netscape/lib -lldap50
+        LDAPINC=-I/usr/netscape/plugins/slapd/slapi/include
+    endif
+    ifdef SOLARIS
+        LDAPLIB=-lldap50
+        LDAPINC=
+    endif
+    ifdef LINUX 
+        LDAPLIB=-lldap
+        LDAPINC=
+    endif
+else
+LDAPLIB=
+LDAPINC=
+endif
+
+ifdef GSOAP
+    GSOAPEXEC=soapcpp2
+    SOAP_HOME=$(PROJECT_HOME)/src/common/soapcpp2
+    SOAPH=$(SOAP_HOME)/stdsoap2.h
+    SOAPC=$(SOAP_HOME)/stdsoap2.c
+    SOAPCPP=$(SOAP_HOME)/stdsoap2.cpp
+    SOAPOBJ=$(SOAP_HOME)/stdsoap2.o
+    SOAPINC=-I$(SOAP_HOME)
+    SOAPFILE=*SoapBinding* soapC.cpp soapH.h soapStub.h 
+endif
+
+ifdef SYB
+SYBINC=-I$(SYBASE)/$(SYBASE_OCS)/include
+ifdef NOTHREAD
+SYBLIB=-L$(SYBASE)/$(SYBASE_OCS)/lib -lblk -lct -lcs -lintl -lcomn -ltcl
+else
+SYBLIB=-L$(SYBASE)/$(SYBASE_OCS)/lib -lblk_r -lct_r -lcs_r -lintl_r -lcomn_r -ltcl_r
+endif
+ifdef CONC
+ifdef NOTHREAD
+SYBOTLLIB=$(SYBLIB) -lbasedbotlcs$(DBBUILDTYPE)
+else
+SYBOTLLIB=$(SYBLIB) -lbasedbotlc$(DBBUILDTYPE)
+endif
+else
+ifdef NOTHREAD
+SYBOTLLIB=$(SYBLIB) -lbasedbotls$(DBBUILDTYPE)
+else
+SYBOTLLIB=$(SYBLIB) -lbasedbotl$(DBBUILDTYPE)
+endif
+endif
+else
+SYBINC=
+SYBLIB=
+SYBOTLLIB=
+endif
+
+#---------------------------------------------------------------------
+# TCL/TK stuff :
+#---------------------------------------------------------------------
+ifdef TCL
+TCLLIB=-L$(TCL_HOME)/lib -ltcl$(TCL_VERSION)
+TCLINC=-I$(TCL_HOME)/include
+else
+TCLINC=
+TCLLIB=
+endif
+
+#---------------------------------------------------------------------
+# VisiBroker stuff :
+#---------------------------------------------------------------------
+ifdef VisiBroker
+ORBCC      = $(VBROKERDIR)/bin/idl2cpp
+VBLIBPATH  = -L$(VBROKERDIR)/lib
+LIBORB     = -lorb_r
+VBINCL	   = -I$(VBROKERDIR)/include
+ifndef VBIDLPATH
+	VBIDLPATH  = ${AICBS_CDMA}/idl
+endif
+endif
+
+######################################################################
+ifdef AIX
+	OSDEF = -DAIX
+endif
+ifdef SOLARIS
+	OSDEF = -DSOLARIS
+endif
+ifdef UNIX_SYS
+	OSDEF = -DUNIX_SYS
+endif
+ifdef HPUX
+	OSDEF = -DHPUX
+endif
+ifdef DIGITAL
+	OSDEF = -DDIGITAL
+endif
+ifdef LINUX
+	OSDEF = -DLINUX
+endif
+
+ifdef IBMVACPP
+	CMPDEF = -DIBMVACPP
+endif
+ifdef SOLARISCPP
+	CMPDEF = -DSOLARISCPP
+endif
+ifdef HPUXCPP
+	CMPDEF = -DHPUXCPP
+endif
+ifdef DIGITALCPP
+	CMPDEF = -DDIGITALCPP
+endif
+ifdef GCC
+	CMPDEF = -DGCC
+endif
+
+ifdef ORA
+	PRODDBTYPE = -DDB_TYPE_ORA
+endif
+ifdef SYB
+#CONC is context on connection. multi process use this.
+ifdef CONC
+	PRODDBTYPE = -DDB_TYPE_SYB -DCONTEXTONCONN
+else
+	PRODDBTYPE = -DDB_TYPE_SYB
+endif
+endif
+
+ifdef CORBA
+	DEFINECORBA = -DVBROKER
+endif
+
+######################################################################
+#       Release/Debug Options                                        #
+######################################################################
+
+ifdef DEBUG
+	DBGOPTS=-DDEBUG=1 
+else
+	DBGOPTS=
+endif
+
+#--------------------------------------------------------------------------
+# if we want add some other universal flags, which are required for all
+# products in our company, we change the following two macros.
+# We change LDFLAGS when we want to change libraries and we change CPPFLAGS
+# when we want to add or remove some flags.
+#--------------------------------------------------------------------------
+CPPFLAGS = -I. ${COMMON_INC} $(DEBUGFLAG) $(DBGOPTS) \
+		$(PIC) $(VBINCL) $(PRODINCL) $(PRODDBTYPE) $(PRODFLAGS) \
+		$(OSDEF) $(CMPDEF) $(DEFINECORBA) \
+		$(CUSTOMERCARE_RELATION) $(SYSOPT) ${ORAINC} $(MYSQLINC) $(LDAPINC) $(SOAPINC) -Wno-deprecated
+LOADLIBES = -L. $(COMMON_LIB) ${PRODLIBS} ${ORALIB} $(SYSLIB) $(MYSQLLIB) $(LDAPLIB)
+
+#--------------------------------------------------------------------------
+# 1. All C or C++ compilers and linkers, we use the default definitions.
+# 2. And we use a lot built-in implicite rules and patter rules. Do not
+#    be panic when you do not notice that.
+#--------------------------------------------------------------------------
+
+.SUFFIXES:     .c .cpp .cc .cxx .idl .o
+
+%.o: %.cxx
+	$(COMPILE.cc) $< $(OUTPUT_OPTION)	
+%.o: %.cpp %.h
+	$(COMPILE.cc) $< $(OUTPUT_OPTION)	
+%.o: %.c
+	$(COMPILE.cc) $< $(OUTPUT_OPTION)	
+%_c.cc: ${VBIDLPATH}/%.idl
+	$(ORBCC) $<
+%_s.cc: ${VBIDLPATH}/%.idl
+	$(ORBCC) $<
+
+# other compiler definition.
+COMPILE.pc = $(PROC)
+COMPILE.java = $(JAVAC)
+ORAINCLFLAG = code=cpp threads=yes define=DB_TYPE_ORA
+%.class: %.java
+	$(COMPILE.java) $< 
+
+%.o: %.pc
+	$(COMPILE.pc) iname=$*.pc $(ORAINCLFLAG) 
+#	$(CC) -c $(CPPFLAGS) $(ORAPROCFLAGS) $*.c $(OUTPUT_OPTION) -o  $@ $@.o
+	$(CC) -c $(CPPFLAGS) $(ORAPROCFLAGS) $*.c $(OUTPUT_OPTION) -o  $@ $@.o
+
+ifndef DEBUG
+	\rm $*.c
+endif

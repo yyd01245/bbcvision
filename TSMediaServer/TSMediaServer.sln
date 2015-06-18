@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TSMediaServer", "TSMediaServer\TSMediaServer.vcxproj", "{95869A52-E26B-4406-83E7-272B98B872EF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tsmediaclient", "Tsmediaclient\Tsmediaclient.vcxproj", "{0FDD26F9-5DFA-4F70-9FA7-A63DF0065530}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TSMediaConsle", "TSMediaConsle\TSMediaConsle.vcxproj", "{AF52627E-E919-4628-BEB5-BB363BAED3D7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TsMediaTool", "TsMediaTool\TsMediaTool.vcxproj", "{1B6C937A-937F-4B05-9D2F-BA2F0D4C092F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TsMediaTool-V2.0", "TsMediaTool-V2.0\TsMediaTool-V2.0.vcxproj", "{7F3F4F3C-E7AD-4C40-A607-A4AE2AA4430A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TsMeidaTool-V3.0", "TsMeidaTool-V3.0\TsMeidaTool-V3.0.vcxproj", "{8B79DC6B-99AC-4583-98CD-AEC7FEF18A51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95869A52-E26B-4406-83E7-272B98B872EF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{95869A52-E26B-4406-83E7-272B98B872EF}.Debug|Win32.Build.0 = Debug|Win32
+		{95869A52-E26B-4406-83E7-272B98B872EF}.Release|Win32.ActiveCfg = Release|Win32
+		{95869A52-E26B-4406-83E7-272B98B872EF}.Release|Win32.Build.0 = Release|Win32
+		{0FDD26F9-5DFA-4F70-9FA7-A63DF0065530}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0FDD26F9-5DFA-4F70-9FA7-A63DF0065530}.Debug|Win32.Build.0 = Debug|Win32
+		{0FDD26F9-5DFA-4F70-9FA7-A63DF0065530}.Release|Win32.ActiveCfg = Release|Win32
+		{0FDD26F9-5DFA-4F70-9FA7-A63DF0065530}.Release|Win32.Build.0 = Release|Win32
+		{AF52627E-E919-4628-BEB5-BB363BAED3D7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AF52627E-E919-4628-BEB5-BB363BAED3D7}.Debug|Win32.Build.0 = Debug|Win32
+		{AF52627E-E919-4628-BEB5-BB363BAED3D7}.Release|Win32.ActiveCfg = Release|Win32
+		{AF52627E-E919-4628-BEB5-BB363BAED3D7}.Release|Win32.Build.0 = Release|Win32
+		{1B6C937A-937F-4B05-9D2F-BA2F0D4C092F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1B6C937A-937F-4B05-9D2F-BA2F0D4C092F}.Debug|Win32.Build.0 = Debug|Win32
+		{1B6C937A-937F-4B05-9D2F-BA2F0D4C092F}.Release|Win32.ActiveCfg = Release|Win32
+		{1B6C937A-937F-4B05-9D2F-BA2F0D4C092F}.Release|Win32.Build.0 = Release|Win32
+		{7F3F4F3C-E7AD-4C40-A607-A4AE2AA4430A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7F3F4F3C-E7AD-4C40-A607-A4AE2AA4430A}.Debug|Win32.Build.0 = Debug|Win32
+		{7F3F4F3C-E7AD-4C40-A607-A4AE2AA4430A}.Release|Win32.ActiveCfg = Release|Win32
+		{7F3F4F3C-E7AD-4C40-A607-A4AE2AA4430A}.Release|Win32.Build.0 = Release|Win32
+		{8B79DC6B-99AC-4583-98CD-AEC7FEF18A51}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8B79DC6B-99AC-4583-98CD-AEC7FEF18A51}.Debug|Win32.Build.0 = Debug|Win32
+		{8B79DC6B-99AC-4583-98CD-AEC7FEF18A51}.Release|Win32.ActiveCfg = Release|Win32
+		{8B79DC6B-99AC-4583-98CD-AEC7FEF18A51}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

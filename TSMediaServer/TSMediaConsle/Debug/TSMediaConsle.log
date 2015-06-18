@@ -1,0 +1,16 @@
+﻿生成启动时间为 2014/6/9 8:59:55。
+     1>项目“d:\Documents\Visual Studio 2013\Projects\TSMediaServer\TSMediaConsle\TSMediaConsle.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt TSMediaConsle.cpp
+         TSMediaConsle.cpp
+     1>d:\documents\visual studio 2013\projects\tsmediaserver\tsmediaconsle\tsmediaconsle.cpp(26): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>d:\documents\visual studio 2013\projects\tsmediaserver\tsmediaconsle\tsmediaconsle.cpp(64): warning C4154: 删除数组表达式；转换到提供的指针
+     1>d:\documents\visual studio 2013\projects\tsmediaserver\tsmediaconsle\tsmediaconsle.cpp(287): warning C4101: “sServerPort”: 未引用的局部变量
+       Link:
+         D:\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"d:\Documents\Visual Studio 2013\Projects\TSMediaServer\Debug\TSMediaConsle.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"d:\Documents\Visual Studio 2013\Projects\TSMediaServer\Debug\TSMediaConsle.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"d:\Documents\Visual Studio 2013\Projects\TSMediaServer\Debug\TSMediaConsle.lib" /MACHINE:X86 Debug\TSMediaConsle.obj
+         TSMediaConsle.vcxproj -> d:\Documents\Visual Studio 2013\Projects\TSMediaServer\Debug\TSMediaConsle.exe
+     1>已完成生成项目“d:\Documents\Visual Studio 2013\Projects\TSMediaServer\TSMediaConsle\TSMediaConsle.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.66
