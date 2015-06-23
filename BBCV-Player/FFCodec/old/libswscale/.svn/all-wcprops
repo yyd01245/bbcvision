@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/FFCodec/libswscale
+END
+swscale.h
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/FFCodec/libswscale/swscale.h
+END
+version.h
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/FFCodec/libswscale/version.h
+END
+rgb2rgb.h
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/FFCodec/libswscale/rgb2rgb.h
+END

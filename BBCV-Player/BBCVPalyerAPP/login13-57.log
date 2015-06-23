@@ -1,0 +1,24 @@
+
+ 2015/06/23:13:57:41:191 send :  {
+	"cmd":	"vnclogin",
+	"resid":	"dfdafd-16565",
+	"iip":	"192.168.60.104",
+	"iport":	"30028",
+	"rate":	"3072",
+	"url":	"http://192.168.100.31/cisco_test11/tv2.0352.html",
+	"serialno":	"dfdafd-16565"
+}XXEE
+ 2015/06/23:13:58:10:888 recv :  {"cmd":"vnclogin","retcode":"0","resid":"dfdafd-6771","vncip":"192.168.200.182","keyport":"62013","freenum":"15","serialno":"dfdafd-6771"}XXEE
+ 2015/06/23:13:58:33:910 login return success   
+
+ 2015/06/23:13:58:37:989 send :  {
+	"cmd":	"vnclogin",
+	"resid":	"dfdafd-16748",
+	"iip":	"192.168.60.104",
+	"iport":	"30028",
+	"rate":	"3072",
+	"url":	"http://192.168.100.31/cisco_test11/tv2.0352.html",
+	"serialno":	"dfdafd-16748"
+}XXEE
+ 2015/06/23:13:58:59:651 recv :  {"cmd":"vnclogin","retcode":"0","resid":"dfdafd-6771","vncip":"192.168.200.182","keyport":"62013","freenum":"15","serialno":"dfdafd-6771"}XXEE
+ 2015/06/23:13:59:0:452 login return success   

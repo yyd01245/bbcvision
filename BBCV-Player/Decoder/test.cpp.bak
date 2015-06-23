@@ -1,0 +1,39 @@
+#include "TSDecoder.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/time.h>
+#include <unistd.h>
+
+
+const int BUFFSIZE = 1280*720*3/2;
+
+FILE *fp =NULL;
+int main()
+{
+	int iwidth = 0;
+	int iHeight = 0;
+	//const char* filename = "/home/ky/rsm-yyd/DecoderTs/1.ts";
+	TSDecoder_t* pInstance = NULL;
+	//pInstance = init_TS_Decoder("/home/ky/rsm-yyd/DecoderTs/1.ts",iwidth,iHeight);
+	pInstance = init_TS_Decoder("udp://@:14000",iwidth,iHeight);
+	usleep(40*1000);
+
+
+	int output_video_size = BUFFSIZE;
+	unsigned char *output_video_yuv420 = new unsigned char[BUFFSIZE];
+	fp = fopen("/home/ky/rsm-yyd/DecoderTs/rcv_overlay/yuv","wb+");
+	{
+		if(NULL == fp)
+			return -1;
+	}
+	while(1)
+		{
+			usleep(40*1000);
+			output_video_size = BUFFSIZE;
+			int ret = get_Video_data(pInstance,output_video_yuv420,&output_video_size,&iwidth,&iHeight);
+			fprintf(stderr,"outputsize=%d ,w=%d,h=%d ret =%d\n",output_video_size,iwidth,iHeight,ret);
+			if(ret ==0 )
+			fwrite(output_video_yuv420,1,output_video_size,fp);
+		}
+	return 0;
+}

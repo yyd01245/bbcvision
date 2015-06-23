@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BBCV-Player", "BBCVPalyerAPP\BBCV-Player.vcproj", "{5395242D-4FC6-4C96-B345-C15B58D57113}"
+	ProjectSection(ProjectDependencies) = postProject
+		{89EA50F3-A70B-46E4-B046-4FBDF6CE359E} = {89EA50F3-A70B-46E4-B046-4FBDF6CE359E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Decoder", "Decoder\Decoder.vcproj", "{89EA50F3-A70B-46E4-B046-4FBDF6CE359E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6D5E900C-6A8B-4D8F-888C-3E498F59DFC5} = {6D5E900C-6A8B-4D8F-888C-3E498F59DFC5}
+		{F8EB66EA-E17A-43EB-AE44-63E8B0753A8E} = {F8EB66EA-E17A-43EB-AE44-63E8B0753A8E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DisplaySDK", "AMPDisplaySDK\AMPDisplaySDK.vcproj", "{6D5E900C-6A8B-4D8F-888C-3E498F59DFC5}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FFCodec", "FFCodec\FFCodec.vcproj", "{F8EB66EA-E17A-43EB-AE44-63E8B0753A8E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{5395242D-4FC6-4C96-B345-C15B58D57113}.Debug.ActiveCfg = Debug|Win32
+		{5395242D-4FC6-4C96-B345-C15B58D57113}.Debug.Build.0 = Debug|Win32
+		{5395242D-4FC6-4C96-B345-C15B58D57113}.Release.ActiveCfg = Release|Win32
+		{5395242D-4FC6-4C96-B345-C15B58D57113}.Release.Build.0 = Release|Win32
+		{89EA50F3-A70B-46E4-B046-4FBDF6CE359E}.Debug.ActiveCfg = Debug|Win32
+		{89EA50F3-A70B-46E4-B046-4FBDF6CE359E}.Debug.Build.0 = Debug|Win32
+		{89EA50F3-A70B-46E4-B046-4FBDF6CE359E}.Release.ActiveCfg = Release|Win32
+		{89EA50F3-A70B-46E4-B046-4FBDF6CE359E}.Release.Build.0 = Release|Win32
+		{6D5E900C-6A8B-4D8F-888C-3E498F59DFC5}.Debug.ActiveCfg = Debug|Win32
+		{6D5E900C-6A8B-4D8F-888C-3E498F59DFC5}.Debug.Build.0 = Debug|Win32
+		{6D5E900C-6A8B-4D8F-888C-3E498F59DFC5}.Release.ActiveCfg = Release|Win32
+		{6D5E900C-6A8B-4D8F-888C-3E498F59DFC5}.Release.Build.0 = Release|Win32
+		{F8EB66EA-E17A-43EB-AE44-63E8B0753A8E}.Debug.ActiveCfg = Debug|Win32
+		{F8EB66EA-E17A-43EB-AE44-63E8B0753A8E}.Debug.Build.0 = Debug|Win32
+		{F8EB66EA-E17A-43EB-AE44-63E8B0753A8E}.Release.ActiveCfg = Release|Win32
+		{F8EB66EA-E17A-43EB-AE44-63E8B0753A8E}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

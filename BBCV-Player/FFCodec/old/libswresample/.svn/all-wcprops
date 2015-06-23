@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/FFCodec/libswresample
+END
+swresample.h
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/FFCodec/libswresample/swresample.h
+END
+version.h
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/FFCodec/libswresample/version.h
+END

@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64
+END
+d3d10.lib
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/d3d10.lib
+END
+d3d11.lib
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/d3d11.lib
+END
+X3DAudio.lib
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/X3DAudio.lib
+END
+DxErr.lib
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/DxErr.lib
+END
+dxguid.lib
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/dxguid.lib
+END
+XInput.lib
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/XInput.lib
+END
+d3dxof.lib
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/d3dxof.lib
+END
+D3DCSX.lib
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/D3DCSX.lib
+END
+d2d1.lib
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/d2d1.lib
+END
+d3d10_1.lib
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/d3d10_1.lib
+END
+d3dx9.lib
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/d3dx9.lib
+END
+dinput8.lib
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/dinput8.lib
+END
+dxgi.lib
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/dxgi.lib
+END
+D3DCSXd.lib
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/D3DCSXd.lib
+END
+dsound.lib
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/dsound.lib
+END
+dwrite.lib
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/dwrite.lib
+END
+d3dx9d.lib
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/d3dx9d.lib
+END
+ddraw.lib
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/ddraw.lib
+END
+xapobase.lib
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/xapobase.lib
+END
+d3dx10.lib
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/d3dx10.lib
+END
+d3d9.lib
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/d3d9.lib
+END
+d3dx11.lib
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/d3dx11.lib
+END
+d3dcompiler.lib
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/d3dcompiler.lib
+END
+XAPOFX.lib
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/XAPOFX.lib
+END
+xapobased.lib
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/xapobased.lib
+END
+d3dx10d.lib
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/d3dx10d.lib
+END
+d3dx11d.lib
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/D3DDisplay/lib/x64/d3dx11d.lib
+END

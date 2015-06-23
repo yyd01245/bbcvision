@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/FFCodec/libavcodec
+END
+old_codec_ids.h
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/FFCodec/libavcodec/old_codec_ids.h
+END
+vda.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/FFCodec/libavcodec/vda.h
+END
+xvmc.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/FFCodec/libavcodec/xvmc.h
+END
+vdpau.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/FFCodec/libavcodec/vdpau.h
+END
+vaapi.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/FFCodec/libavcodec/vaapi.h
+END
+opt.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/FFCodec/libavcodec/opt.h
+END
+avcodec.h
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/FFCodec/libavcodec/avcodec.h
+END
+dxva2.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/FFCodec/libavcodec/dxva2.h
+END
+version.h
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/FFCodec/libavcodec/version.h
+END
+avfft.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/%E7%BB%84%E4%BB%B6/!svn/ver/4/1050.DecodeDisplay/trunk/02.Software/AMPClientSDK/src/FFCodec/libavcodec/avfft.h
+END

@@ -1,0 +1,12 @@
+
+ 2015/06/23:13:30:47:873 send :  {
+	"cmd":	"vnclogin",
+	"resid":	"dfdafd-11294",
+	"iip":	"192.168.60.104",
+	"iport":	"30028",
+	"rate":	"3072",
+	"url":	"http://192.168.100.31/cisco_test11/tv2.0352.html",
+	"serialno":	"dfdafd-11294"
+}XXEE
+ 2015/06/23:13:32:11:680 recv :  saddasXXEE
+ 2015/06/23:13:32:11:681 login return failed   
